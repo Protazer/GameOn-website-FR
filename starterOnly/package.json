@@ -1,0 +1,34 @@
+{
+  "name": "gameon",
+  "version": "1.0.0",
+  "description": "Validation de champs de formulaire d'une landing page",
+  "main": "modal.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Protazer/GameOn-website-FR.git"
+  },
+  "keywords": [
+    "JS",
+    "HTML",
+    "CSS"
+  ],
+  "author": "Florian HUBERDEAU",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Protazer/GameOn-website-FR/issues"
+  },
+  "homepage": "https://github.com/Protazer/GameOn-website-FR#readme",
+  "devDependencies": {
+    "jsdoc": "^3.6.7"
+  },
+  "dependencies": {
+    "npm-run": "^5.0.1"
+  }
+}

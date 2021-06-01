@@ -5,7 +5,7 @@
   <title>Reservation</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="modal.css" />
+  <link rel="stylesheet" href="./assets/css/modal.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=DM+Sans" rel="stylesheet" />
 </head>
@@ -15,7 +15,7 @@
   <div class="topnav" id="myTopnav">
 
     <div class="header-logo">
-      <img alt="logo" src="Logo.png" width="auto" height="auto" />
+      <img alt="logo" src="./assets/img/Logo.png" width="auto" height="auto" />
     </div>
 
     <div class="main-navbar">
@@ -48,7 +48,7 @@
       </div>
 
       <div class="hero-img">
-        <img src="./bg_img.jpg" alt="img" />
+        <img src="./assets/img/bg_img.jpg" alt="img" />
       </div>
 
       <button class="btn-signup modal-btn">
@@ -61,68 +61,68 @@
       <div class="content">
         <span class="close" id="close-btn"></span>
         <div class="modal-body">
-          <form name="reserve" action="index.html" method="get">
+          <form id="form" action="index.html" method="get">
 
             <div class="formData">
               <label for="firstName">Prénom</label>
-              <input class="text-control" type="text" id="firstName" name="firstName"
+              <input class="text-control" type="text" id="firstName" name="_firstName"
                 placeholder="Veuillez entrer votre prénom" />
             </div>
 
             <div class="formData">
               <label for="lastName">Nom</label>
-              <input class="text-control" type="text" id="lastName" name="lastName"
+              <input class="text-control" type="text" id="lastName" name="_lastName"
                 placeholder="Veuillez entrer votre nom" />
             </div>
 
             <div class="formData">
               <label for="email">E-mail</label>
-              <input class="text-control" type="text" id="email" name="email"
+              <input class="text-control" type="text" id="email" name="_email"
                 placeholder="Veuillez entrer votre adresse email" />
             </div>
 
             <div class="formData">
               <label for="birthdate">Date de naissance</label>
-              <input class="text-control" type="date" id="birthdate" name="birthdate" />
+              <input class="text-control" type="date" id="birthdate" name="_birthdate" />
             </div>
 
             <div class="formData">
               <label for="quantity">À combien de tournois GameOn avez-vous déjà participé ?</label>
-              <input type="number" class="text-control" id="quantity" name="quantity" value="0" />
+              <input type="number" class="text-control" id="quantity" name="_quantity" value="0" min="0" max="99" />
             </div>
 
             <fieldset>
               <legend class="text-label">Quelles villes ?</legend>
               <div class="formData">
-                <input class="checkbox-input" type="radio" id="location1" name="location" value="New York" checked />
+                <input class="checkbox-input" type="radio" id="location1" name="_location" value="New York" />
                 <label class="checkbox-label" for="location1"><span class="checkbox-icon"></span>New York</label>
 
-                <input class="checkbox-input" type="radio" id="location2" name="location" value="San Francisco" />
+                <input class="checkbox-input" type="radio" id="location2" name="_location" value="San Francisco" />
                 <label class="checkbox-label" for="location2"><span class="checkbox-icon"></span>San Francisco</label>
 
-                <input class="checkbox-input" type="radio" id="location3" name="location" value="Seattle" />
+                <input class="checkbox-input" type="radio" id="location3" name="_location" value="Seattle" />
                 <label class="checkbox-label" for="location3"><span class="checkbox-icon"></span>Seattle</label>
 
-                <input class="checkbox-input" type="radio" id="location4" name="location" value="Chicago" />
+                <input class="checkbox-input" type="radio" id="location4" name="_location" value="Chicago" />
                 <label class="checkbox-label" for="location4"><span class="checkbox-icon"></span>Chicago</label>
 
-                <input class="checkbox-input" type="radio" id="location5" name="location" value="Boston" />
+                <input class="checkbox-input" type="radio" id="location5" name="_location" value="Boston" />
                 <label class="checkbox-label" for="location5"><span class="checkbox-icon"></span>Boston</label>
 
-                <input class="checkbox-input" type="radio" id="location6" name="location" value="Portland" />
+                <input class="checkbox-input" type="radio" id="location6" name="_location" value="Portland" />
                 <label class="checkbox-label" for="location6"><span class="checkbox-icon"></span>Portland</label>
               </div>
             </fieldset>
 
             <div class="formData">
-              <input class="checkbox-input" type="checkbox" id="checkbox1" name="agree" checked />
-              <label class="checkbox2-label" for="checkbox1" required><span class="checkbox-icon"></span>
+              <input class="checkbox-input" type="checkbox" id="agree" name="_agree" checked />
+              <label class="checkbox2-label" for="agree" required><span class="checkbox-icon"></span>
                 J'ai lu et accepté les conditions d'utilisation.
               </label>
 
-              <input class="checkbox-input" type="checkbox" id="checkbox2" name="news" />
-              <label class="checkbox2-label" for="checkbox2"><span class="checkbox-icon"></span>
-                Je Je souhaite être prévenu des prochains évènements.
+              <input class="checkbox-input" type="checkbox" id="news" name="_news" />
+              <label class="checkbox2-label" for="news"><span class="checkbox-icon"></span>
+                Je souhaite être prévenu des prochains évènements.
               </label>
             </div>
 
@@ -137,7 +137,7 @@
     <p class="copyrights">Copyright 2014 - 2020, GameOn Inc.</p>
   </footer>
 
-  <script src="modal.js"></script>
+  <script type="module" src="js/controller/modal.js"></script>
   <noscript>
     <h1>Vous devez activer javascript sur votre navigateur pour que ce site fonctionne correctement.</h1>
   </noscript>
