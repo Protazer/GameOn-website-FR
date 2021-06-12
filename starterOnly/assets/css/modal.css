@@ -132,6 +132,8 @@ main {
 
 .bground {
   display: none;
+  align-items: center;
+  justify-content: center;
   position: fixed;
   z-index: 1;
   left: 0;
@@ -143,7 +145,6 @@ main {
 }
 
 .content {
-  margin: 4% auto;
   width: 100%;
   max-width: 500px;
   animation-name: modalopen;
@@ -156,9 +157,41 @@ main {
   padding-top: 10px;
 }
 
+.confirmation {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  padding: 20px;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0;
+}
+
+.confirmation--visible {
+  animation: fadeInMessage 0.5s linear 0.5s both;
+
+}
+
+
+.confirmation__content {
+  font-size: 3rem;
+  white-space: normal;
+  text-align: center;
+}
+
 .modal-body {
   padding: 15px 8%;
   margin: 15px auto;
+}
+
+.form--hidden {
+  animation: fadeOutForm 0.5s linear forwards;
+  z-index: -1;
 }
 
 fieldset {
@@ -295,6 +328,7 @@ form>.formData {
   opacity: 1;
   cursor: pointer;
   transform: scale(0.7);
+  z-index: 4;
 }
 
 .close:before,
@@ -314,8 +348,6 @@ form>.formData {
 .close:after {
   transform: rotate(-45deg);
 }
-
-
 
 .btn-submit,
 .btn-signup {
@@ -588,5 +620,31 @@ footer {
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes fadeOutForm {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInMessage {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+    z-index: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 0;
   }
 }

@@ -59,7 +59,7 @@
 
     <div class="bground">
       <div class="content">
-        <span class="close" id="close-btn"></span>
+        <span class="close-btn close"></span>
         <div class="modal-body">
           <form id="form" action="index.html" method="get">
 
@@ -94,7 +94,7 @@
             <fieldset>
               <legend class="text-label">Quelles villes ?</legend>
               <div class="formData">
-                <input class="checkbox-input" type="radio" id="location1" name="_location" value="New York" />
+                <input class="checkbox-input" type="radio" id="location1" name="_location" value="New York" checked />
                 <label class="checkbox-label" for="location1"><span class="checkbox-icon"></span>New York</label>
 
                 <input class="checkbox-input" type="radio" id="location2" name="_location" value="San Francisco" />
@@ -128,6 +128,12 @@
 
             <input class="btn-submit" type="submit" value="C'est parti" />
           </form>
+          <div class="confirmation">
+            <h2 class="confirmation__content">
+              Merci ! <br> Votre réservation a été reçue.
+            </h2>
+            <input class=" close-btn btn-submit" type="button" value="Ok" />
+          </div>
         </div>
       </div>
     </div>
@@ -136,8 +142,8 @@
   <footer>
     <p class="copyrights">Copyright 2014 - 2020, GameOn Inc.</p>
   </footer>
-
-  <script type="module" src="js/controller/modal.js"></script>
+  <script src="js/entity/ReserveForm.js"></script>
+  <script src="js/controller/modal.js"></script>
   <noscript>
     <h1>Vous devez activer javascript sur votre navigateur pour que ce site fonctionne correctement.</h1>
   </noscript>
