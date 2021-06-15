@@ -8,15 +8,12 @@ function editNav() {
   }
 }
 
-
 // DOM Elements
 const modalbg = document.querySelector(".bground");
 const modalBtn = document.querySelectorAll(".modal-btn");
 const closeBtn = document.querySelectorAll('.close-btn');
 const form = document.getElementById('form');
 const confirmation = document.querySelector('.confirmation');
-
-
 
 const errors = {
   _firstName: "Veuillez entrer 2 caractères ou plus pour le champ du prénom.",
@@ -60,8 +57,6 @@ function sendConfirmation() {
   confirmation.classList.add('confirmation--visible');
 }
 
-
-
 /**
  * Evenement d'ouverture de la modale.
  * @event click 
@@ -88,7 +83,6 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   //Assigniation des champs de saisi dans l'object
-
   var object = {};
   const formData = new FormData(form);
   formData.forEach((value, key) => {

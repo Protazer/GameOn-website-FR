@@ -26,12 +26,13 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code> class User {
+            <pre class="prettyprint source linenums"><code>export default class User {
+   
   /**
    * Class User - Cette classe permet d'instancier un objet User
-   * 
-   * @param {string} firstname - La valeur de l'attribut prènom
-   * @param {string} lastname - La valeur de l'attribut nom
+   * @class User
+   * @param {string} firstName - La valeur de l'attribut prènom
+   * @param {string} lastName - La valeur de l'attribut nom
    * @param {string} email - La valeur de l'attribut email
    * @param {string} birthdate - La valeur de l'attribut birthdate
    * @param {string} quantity - La valeur de l'attribut quantity
@@ -39,13 +40,13 @@
    * @param {boolean} agree - La valeur de l'attribut acceptation des conditions
    * @param {boolean} news - La valeur de l'attribut newsletter
    */
-  constructor(firstname, lastname, email, birthdate, quantity, city, agree, news) {
-    this._firstname = firstname;
-    this._lastname = lastname;
+   constructor(firstName, lastName, email, birthdate, quantity, location, agree, news) {
+    this._firstName = firstName;
+    this._lastName = lastName;
     this._email = email;
     this._birthdate = birthdate;
     this._quantity = quantity;
-    this._city = city;
+    this._location = location;
     this._agree = agree;
     this._news = news;
   }
@@ -54,22 +55,28 @@
 
   /**
    * Accès à la valeur de l'attribut firstname
+   * @method
+   * @memberof User
    * @return {string} La valeur de l'attribut firstname
    */
-  get firstname() {
-    return this._firstname;
+  get firstName() {
+    return this._firstName;
   }
 
   /**
    * Accès à la valeur de l'attribut lastname
+   * @method
+   * @memberof User
    * @return {string} La valeur de l'attribut lastname
    */
-  get lastname() {
-    return this._lastname;
+  get lastName() {
+    return this._lastName;
   }
 
   /**
    * Accès à la valeur de l'attribut email
+   * @method
+   * @memberof User
    * @return {string} La valeur de l'attribut email
    */
   get email() {
@@ -78,6 +85,8 @@
 
   /**
    * Accès à la valeur de l'attribut birthdate
+   * @method
+   * @memberof User
    * @return {string} La valeur de l'attribut birthdate
    */
   get birthdate() {
@@ -86,6 +95,8 @@
 
   /**
    * Accès à la valeur de l'attribut quantity
+   * @method
+   * @memberof User
    * @return {string} La valeur de l'attribut quantity
    */
   get quantity() {
@@ -94,6 +105,8 @@
 
   /**
    * Accès à la valeur de l'attribut city
+   * @method
+   * @memberof User
    * @return {string} La valeur de l'attribut city
    */
   get city() {
@@ -102,6 +115,8 @@
 
   /**
    * Accès à la valeur de l'attribut agree
+   * @method
+   * @memberof User
    * @return {boolean} La valeur de l'attribut agree
    */
   get agree() {
@@ -110,6 +125,8 @@
 
   /**
    * Accès à la valeur de l'attribut news
+   * @method
+   * @memberof User
    * @return {boolean} La valeur de l'attribut news
    */
   get news() {
@@ -118,22 +135,28 @@
   
   /**
    * Modification de la valeur de l'attribut firstname
+   * @method
+   * @memberof User
    * @param {string} newFirstname - La valeur du paramètre newFirstname
    */
-  set firstname(newFirstname) {
+  set firstName(newFirstname) {
     this._firstname = newFirstname;
   }
 
   /**
    * Modification de la valeur de l'attribut lastname
+   * @method
+   * @memberof User
    * @param {string} newLastname - La valeur du paramètre newLastname
    */
-  set lastname(newLastname) {
+  set lastName(newLastname) {
     this._lastname = newLastname;
   }
 
   /**
    * Modification de la valeur de l'attribut email
+   * @method
+   * @memberof User
    * @param {string} newEmail - La valeur du paramètre newEmail
    */
   set email(newEmail) {
@@ -142,6 +165,8 @@
 
   /**
    * Modification de la valeur de l'attribut birthdate
+   * @method
+   * @memberof User
    * @param {string} newBirthdate - La valeur du paramètre newBirthdate
    */
   set birthdate(newBirthdate) {
@@ -150,6 +175,8 @@
 
   /**
    * Modification de la valeur de l'attribut quantity
+   * @method
+   * @memberof User
    * @param {string} newQuantity - La valeur du paramètre newQuantity
    */
   set quantity(newQuantity) {
@@ -158,6 +185,8 @@
 
   /**
    * Modification de la valeur de l'attribut city
+   * @method
+   * @memberof User
    * @param {string} newCity - La valeur du paramètre newCity
    */
   set city(newCity) {
@@ -166,6 +195,8 @@
 
   /**
    * Modification de la valeur de l'attribut agree
+   * @method
+   * @memberof User
    * @param {boolean} value - La valeur du paramètre value
    */
   set agree(value) {
@@ -174,14 +205,16 @@
 
   /**
    * Modification de la valeur de l'attribut news
+   * @method
+   * @memberof User
    * @param {boolean} value - La valeur du paramètre value
    */
   set news(value) {
     this._news = value;
   }
-}
+ }
 
-export default User;</code></pre>
+</code></pre>
         </article>
     </section>
 
@@ -191,13 +224,13 @@ export default User;</code></pre>
 </div>
 
 <nav>
-    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ReserveForm.html">ReserveForm</a></li><li><a href="User.html">User</a></li></ul>
+    <h2><a href="index.html">GameOn project</a></h2><h3>Classes</h3><ul><li><a href="ReserveForm.html">ReserveForm</a></li><li><a href="User.html">User</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Thu Jun 03 2021 10:04:50 GMT+0200 (Central European Summer Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Tue Jun 15 2021 13:53:23 GMT+0200 (Central European Summer Time)
 </footer>
 
 <script> prettyPrint(); </script>
