@@ -83,14 +83,14 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
 
   //Assigniation des champs de saisi dans l'object
-  var object = {};
+  let object = {};
   const formData = new FormData(form);
   formData.forEach((value, key) => {
-    object[key] = value;
+    object[key] = value.trim();
   })
-
+  
   // Création et validation du formulaire
-  let formObj = new ReserveForm(object, errors);
+  let formObj = new Reserve(object, errors);
   formObj.validDatas();
   if (formObj.validDatas()) {
     form.reset();

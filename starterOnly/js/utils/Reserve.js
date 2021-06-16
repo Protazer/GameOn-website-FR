@@ -1,35 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <title>JSDoc: Source: entity/ReserveForm.js</title>
-
-    <script src="scripts/prettify/prettify.js"> </script>
-    <script src="scripts/prettify/lang-css.js"> </script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
-    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
-</head>
-
-<body>
-
-<div id="main">
-
-    <h1 class="page-title">Source: entity/ReserveForm.js</h1>
-
-    
-
-
-
-    
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>class ReserveForm {
+class Reserve {
   /**
-   * Class ReserveForm - cette classe permet d'instancier un objet ReserveForm
-   * @class ReserveForm
+   * Class Reserve - cette classe permet d'instancier un objet Reserve
+   * @class Reserve
    * @param {Object} user - la valeur de l'attribut user
    * @param {Object} errorsMessages - la valeur de l'attribut messages d'erreur
    */
@@ -44,7 +16,7 @@
    * Envoie une alerte de validation sur le champ passé en paramètre 
    * @method
    * @param {string} - La valeur du champ de formulaire
-   * @memberof ReserveForm
+   * @memberof Reserve
    */
   showAlert(el) {
     let inputs = document.getElementsByTagName('input');
@@ -60,7 +32,7 @@
    * Supprime une alerte de validation sur le champ passé en paramètre 
    * @method
    * @param {string} - La valeur du champ de formulaire
-   * @memberof ReserveForm
+   * @memberof Reserve
    */
   removeAlert(el) {
     let inputs = document.getElementsByTagName('input');
@@ -75,22 +47,23 @@
   /**
    * Validation des champs de formulaire type texte
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    */
   inputsValidation() {
     let regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     this.inputsValid = true;
+  
     for (let property in this.user) {
-      if ((property == "_firstName" || property == '_lastName') &amp;&amp; this.user[property].length &lt; 2) {
+      if ((property == "_firstName" || property == '_lastName') && this.user[property].length < 2) {
         this.showAlert(property);
         this.inputsValid = false;
-      } else if (property == "_email" &amp;&amp; !regex.test(this.user[property])) {
+      } else if (property == "_email" && !regex.test(this.user[property])) {
         this.showAlert(property);
         this.inputsValid = false;
-      } else if (property == "_quantity" &amp;&amp; this.user[property].length &lt; 1) {
+      } else if (property == "_quantity" && this.user[property].length < 1) {
         this.showAlert(property);
         this.inputsValid = false;
-      } else if (property == "_birthdate" &amp;&amp; this.user[property].length == "") {
+      } else if (property == "_birthdate" && this.user[property].length == "") {
         this.showAlert(property);
         this.inputsValid = false;
       }
@@ -100,7 +73,7 @@
   /**
    * Validation des champs de formulaire type checkboxes
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    */
   checkboxesValidation() {
     if (this.user["_location"] == undefined) {
@@ -116,7 +89,7 @@
   /**
    * Lance la validation de formulaire 
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    * @return {boolean} true - Si les valeurs de validation sont true
    */
   validDatas() {
@@ -125,7 +98,7 @@
     }
     this.inputsValidation();
     this.checkboxesValidation();
-    if (this.inputsValid &amp;&amp; this.checkboxesValid) {
+    if (this.inputsValid && this.checkboxesValid) {
       return true;
     }
   }
@@ -133,7 +106,7 @@
   /**
    * Accès à la valeur de l'attribut user
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    * @return {object} La valeur de l'attribut user
    */
   get user() {
@@ -143,7 +116,7 @@
   /**
    * Accès à la valeur de l'attribut errorsMessages
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    * @return {object} La valeur de l'attribut errorsMessages
    */
   get errorsMessages() {
@@ -153,7 +126,7 @@
   /**
    * Modification de la valeur de l'attribut newUser
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    * @param {object} newUser - La valeur du paramètre newUser
    */
   set user(newUser) {
@@ -163,32 +136,10 @@
   /**
    * Modification de la valeur de l'attribut newMessages
    * @method
-   * @memberof ReserveForm
+   * @memberof Reserve
    * @param {object} newMessages - La valeur du paramètre newMessages
    */
   set errorsMessages(newMessages) {
     this._errorsMessages = newMessages;
   }
-}</code></pre>
-        </article>
-    </section>
-
-
-
-
-</div>
-
-<nav>
-    <h2><a href="index.html">GameOn project</a></h2><h3>Classes</h3><ul><li><a href="ReserveForm.html">ReserveForm</a></li><li><a href="User.html">User</a></li></ul><h3>Events</h3><ul><li><a href="global.html#event:click">click</a></li><li><a href="global.html#event:submit">submit</a></li></ul><h3>Global</h3><ul><li><a href="global.html#closeModal">closeModal</a></li><li><a href="global.html#launchModal">launchModal</a></li><li><a href="global.html#sendConfirmation">sendConfirmation</a></li></ul>
-</nav>
-
-<br class="clear">
-
-<footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.7</a> on Tue Jun 15 2021 16:08:59 GMT+0200 (Central European Summer Time)
-</footer>
-
-<script> prettyPrint(); </script>
-<script src="scripts/linenumber.js"> </script>
-</body>
-</html>
+}
