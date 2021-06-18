@@ -34,7 +34,6 @@ function launchModal() {
   if (form.classList.contains('form--hidden')) {
     form.classList.remove('form--hidden');
   }
-  
 }
 
 /**
