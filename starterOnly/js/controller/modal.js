@@ -48,7 +48,7 @@ function closeModal() {
 }
 
 /**
- * Envoie le message de confirmation aprés somission du formulaire.
+ * Envoie le message de confirmation aprés soumission du formulaire.
  * @fires form#submit
  */
 function sendConfirmation() {
