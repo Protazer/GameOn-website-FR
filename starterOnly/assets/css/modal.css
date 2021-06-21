@@ -184,7 +184,7 @@ main {
 }
 
 fieldset {
-  margin-top: 0.2rem;
+  margin-top: 0.5rem;
   border: none;
 }
 
@@ -517,7 +517,7 @@ footer {
   }
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .topnav a {
     display: none;
   }
@@ -602,10 +602,13 @@ footer {
   }
 }
 
-
 @media screen and (max-width: 375px) {
   .modal-body {
     margin: 0;
+  }
+
+  fieldset {
+    margin-top: 0;
   }
 
   label {
